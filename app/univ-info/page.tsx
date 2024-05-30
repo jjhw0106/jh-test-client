@@ -1,5 +1,7 @@
+import Tooltip from "@/components/tooltip";
+
 export default function UnivInfo() {
   return <div>
-    <p className="">대입정보</p>
+    {/* <Tooltip></Tooltip> */}
   </div>
 }
