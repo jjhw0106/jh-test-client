@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface TooltipProps {
+interface SubMenuProps {
   url: string
   itemIdx: number
   // items: TooltipItems[]
@@ -51,11 +51,9 @@ const tooltips: TooltipItems[][] =
   ],
 ];
 
-export default function Tooltip(props: TooltipProps) {
+export default function Submenu(props: SubMenuProps) {
   // 메뉴 관리 db로 처리하고 싶다
   return <ul className="w-screen h-32 bg-green-700 m-0 p-0 items-center flex-col">
     {tooltips[props.itemIdx].map((tooltip, index)=><li key={index}><Link href={tooltip.url}>{tooltip.title}</Link></li>)}
   </ul>
-  
-  
 }
