@@ -54,22 +54,8 @@ const tooltips: TooltipItems[][] =
 export default function Tooltip(props: TooltipProps) {
   // 메뉴 관리 db로 처리하고 싶다
   return <ul className="w-screen h-32 bg-green-700 m-0 p-0 items-center flex-col">
-    {tooltips[props.itemIdx].map((tooltip, index)=><li key={index}>{tooltip.title}</li>)}
+    {tooltips[props.itemIdx].map((tooltip, index)=><li key={index}><Link href={tooltip.url}>{tooltip.title}</Link></li>)}
   </ul>
   
   
-  // <ul className="flex">
-  //   <li>
-  //     <p className="font-semibold">입시전략</p>
-  //   </li>
-  //   <li>
-  //     <p className="font-semibold">대입자료실</p>
-  //     <ul className="flex-col">
-  //       {props.items.map(item=><li><Link href={item.url}>{item.title}</Link></li>)}
-  //     </ul>
-  //   </li>
-  //   <li>
-  //     <p className="font-semibold">진학 메일링</p>
-  //   </li>
-  // </ul>
 }

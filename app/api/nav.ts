@@ -3,7 +3,7 @@ import { API_URL } from "../constants";
 export async function getMenu() {
   try {
     const response = await fetch(`http://localhost:8000/guidelines/menus`);
-    
+
     return await response.json();
   } catch(error) {
     console.error('fetch error', error);
@@ -11,7 +11,7 @@ export async function getMenu() {
 }
 
 export async function getTest() {
-  try {
+  try { 
     const response = await fetch(`http://localhost:8000`)
 
     if (!response.ok) {
